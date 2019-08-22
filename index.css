@@ -1,0 +1,108 @@
+body{
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+}
+
+header {
+    z-index: 1;
+    padding-right: 410px;
+    background-color: white;
+    outline: 1px solid rgb(155, 15, 90);
+}
+div.col.m2{
+    padding: 0px;
+}
+div.col.m10{
+    padding: 1px;
+}
+.col{
+    padding: 0;
+}
+.imagen{
+    width: 100%;
+    outline: 1px solid rgb(155, 15, 90);
+}
+.cuerpo{
+    width: 100%;
+    background-color: rgb(222, 222, 222);
+}
+.menu-ico{
+    width: 35px;
+}
+.sidebar{
+    z-index: 1;
+    height: 100%;
+    background-color: rgb(255, 48, 158); 
+    color: aliceblue;
+    outline: 1px solid rgb(155, 15, 90);
+}
+.sidebar ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+}
+.sidebar h2{
+    font-size: 35px;
+    text-align: center;
+    margin: 0;
+    padding: 10px;
+    background-color: rgb(182, 31, 111);
+}
+.sidebar a{
+    display: block;
+    color: ghostwhite;
+    text-decoration: none;
+    padding: 10px;
+    font-size: 17px;
+}
+.sidebar a:hover{
+    text-decoration: none;
+    color: lightgray;
+}
+.sidebar li{
+    outline: 1px solid rgb(155, 15, 90);
+    transition: border 0.3s;
+}
+.sidebar li:hover{
+    background-color: rgb(255, 85, 175);
+    border-left: 5px solid aliceblue;
+}
+
+.contenido{
+    padding-left: 15px;
+    position: absolute;
+    margin-left: 251px;
+    widows: 100%;
+}
+.img-info{
+    padding-top: 125px;
+    padding-left: 25px;
+}
+.boton{
+    background-color: ghostwhite;
+    text-align: center;
+    margin-left: 120px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    padding: 10px;
+}
+.botonL{
+    border: deeppink;
+    background-color: deeppink;
+    border-color: 1px solid deeppink;
+    padding: 10px 24px;
+    padding-bottom: 28px;
+    padding-top: 3px;
+}
+.botonL:hover{
+    background-color: rgb(210, 20, 120);
+}
+.botonR{
+    padding: 10px 24px;
+    padding-bottom: 26px;
+    padding-top: 3px;
+}
+.justy{
+    text-align: justify;
+}

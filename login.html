@@ -1,0 +1,38 @@
+<!DOCTYPE html ">
+<html lang="es">
+<head>
+    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Inicio de sesion</title>
+</head>
+
+<body>    
+    <SCRIPT  language=JavaScript> 
+        function go(){
+            if (document.form.login.value=='manuel' && document.form.password.value=='victoria' ){ 
+                document.form.submit(); 
+            } 
+            else{ 
+                alert("Porfavor ingrese, nombre de usuario y contraseña correctos."); 
+            } 
+        } 
+    </SCRIPT> 
+    <header>
+            <div>
+                <img src="img/logo.png" alt="Clinica Victoria" title="Clinica Victoria" >
+            </div>
+    </header>
+
+    <div class="login">
+        <FORM name=form action="index.html">
+            <p>	&#128100 Usuario: <INPUT type=text name=login> 
+            <p> &#128274 Contraseña: <INPUT type=password name=password> 
+            <br>
+            <br>
+            <INPUT onclick=go() type=button value=Acceder>
+        </FORM> 
+    </div>
+
+</body>
+</html>

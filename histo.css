@@ -1,0 +1,69 @@
+.title{
+    padding-top: 100px;
+    padding-bottom: 10px;
+    margin: 0;
+    padding-left: 300px;
+}
+form.col.s12{
+    padding-left: 100px;
+    padding-right: 100px;
+}
+form{
+    background-color: rgb(199, 197, 197);
+    padding-right: 150px;
+    padding-top: 40px;
+    border-radius: 10px;
+
+}
+.botonL{
+    border: deeppink;
+    background-color: deeppink;
+    border-color: 1px solid deeppink;
+    padding: 10px 24px;
+    padding-bottom: 28px;
+    padding-top: 3px;
+    margin-bottom: 15px;
+}
+.botonL:hover{
+    background-color: rgb(210, 20, 120);
+}
+.botonL::after{
+    background-color: rgb(210, 20, 120);
+}
+.botonR{
+    background-color: darkgray;
+    padding: 10px 24px;
+    padding-bottom: 26px;
+    padding-top: 3px;
+    margin-bottom: 15px;
+}
+.botonR:hover{
+    background-color: gray;
+}
+.input-field label {
+    color: #000;
+}
+.input-field.col.s6 input:focus + label {
+    color: deeppink;
+}
+.input-field.col.s12 textarea:focus + label {
+    color: deeppink;
+}
+.input-field input[type=text] {
+    border-bottom: 1px solid #000;
+    box-shadow: 0 1px 0 0 #000;
+}
+.input-field input[type=text]:focus {
+    border-bottom: 1px solid #000;
+    box-shadow: 0 1px 0 0 #000;
+}
+.input-field textarea[type=textarea] {
+    border-bottom: 1px solid #000;
+    box-shadow: 0 1px 0 0 #000;
+}
+.input-field input[type=number] {
+    border-bottom: 1px solid #000;
+    box-shadow: 0 1px 0 0 #000;
+}
+
+
