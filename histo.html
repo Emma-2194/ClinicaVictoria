@@ -41,31 +41,31 @@
                         </header>
                     </div>
                 </div>
-                <div class="row" >
+                <div class="row card-panel">
                     <div class="col m12">
                             <form class="col s12">
-                                    <div class="row">
-                                        <div class="input-field col s6">
-                                            <input id="name" type="text" class="validate">
+                                <div class="row">
+                                    <div class="input-field col s6">
+                                            <input id="name" type="text" class="validate" required>
                                             <label for="name">Nombre del Paciente</label>
-                                        </div>
-                                      <div class="input-field col s6">
-                                        <input id="edad" type="number" class="validate">
-                                        <label for="edad">Edad del Paciente:</label>
-                                      </div>
                                     </div>
-                                    <div class="row">
-                                        <div class="input-field col s6">
+                                    <div class="input-field col s6">
+                                        <input id="edad" type="number" class="validate" required>
+                                        <label for="edad">Edad del Paciente:</label>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="input-field col s6">
                                             <span>Genero del Paciente</span>
                                                 <p>
-                                                    <label>
-                                                        <input class="with-gap" name="genero" type="radio"/>
+                                                    <label class="ajuste">
+                                                        <input class="with-gap" name="genero" type="radio" class="validate" required />
                                                         <span>Masculino</span>
                                                     </label>
                                                 </p>
                                                 <p>
                                                     <label>
-                                                        <input class="with-gap" name="genero" type="radio"/>
+                                                        <input class="with-gap" name="genero" type="radio" class="validate" required />
                                                         <span>Femenino</span>
                                                     </label>
                                                 </p>  
@@ -73,20 +73,20 @@
                                         <div class="input-field col s6">
                                             <span>Estado Civil del Paciente</span>
                                                 <p>
-                                                    <label>
-                                                        <input class="with-gap" name="estadoCivil" type="radio"/>
+                                                    <label class="ajuste">
+                                                        <input class="with-gap" name="estadoCivil" type="radio" class="validate" required />
                                                         <span>Soltero</span>
                                                     </label>
                                                 </p>
                                                 <p>
                                                     <label>
-                                                        <input class="with-gap" name="estadoCivil" type="radio"/>
+                                                        <input class="with-gap" name="estadoCivil" type="radio" class="validate" required />
                                                         <span>Casado</span>
                                                     </label>
                                                 </p>
                                                 <p>
                                                     <label>
-                                                        <input class="with-gap" name="estadoCivil" type="radio"/>
+                                                        <input class="with-gap" name="estadoCivil" type="radio"/ class="validate" required >
                                                         <span>Otro</span>
                                                     </label>
                                                 </p>  
@@ -95,15 +95,12 @@
                                         <div class="col s12">
                                             <div class="row">
                                                 <div class="input-field col s12">
-                                                    <textarea id="antes-fam" class="materialize-textarea"></textarea>
+                                                    <input id="antes-fam" type="text" class="validate">
                                                     <label for="antes-fam">Antecedentes familiares</label>
                                                 </div>
                                             </div>
-                                        
-                                        
-
-                                  <input type="submit" class="btn waves-effect waves-light, botonL">
-                                  <input type="reset"  class="btn waves-effect waves-light, botonR">
+                                            <button class="btn waves-effect waves-light" type="submit" name="action"> Continuar</button>
+                                            <button class="btn waves-effect waves-light, rojo" type="reset" name="action"> Borrar</button>
 
                         </form>
                     </div>

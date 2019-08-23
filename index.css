@@ -1,11 +1,12 @@
 body{
     font-family: 'Open Sans', sans-serif;
     margin: 0;
+    padding: 0;
 }
 
 header {
     z-index: 1;
-    padding-right: 410px;
+    padding-right: 400px;
     background-color: white;
     outline: 1px solid rgb(155, 15, 90);
 }
@@ -71,7 +72,6 @@ div.col.m10{
 
 .contenido{
     padding-left: 15px;
-    position: absolute;
     margin-left: 251px;
     widows: 100%;
 }
@@ -79,30 +79,13 @@ div.col.m10{
     padding-top: 125px;
     padding-left: 25px;
 }
-.boton{
-    background-color: ghostwhite;
-    text-align: center;
-    margin-left: 120px;
-    margin-top: 25px;
-    margin-bottom: 25px;
-    padding: 10px;
-}
-.botonL{
-    border: deeppink;
-    background-color: deeppink;
-    border-color: 1px solid deeppink;
-    padding: 10px 24px;
-    padding-bottom: 28px;
-    padding-top: 3px;
-}
-.botonL:hover{
-    background-color: rgb(210, 20, 120);
-}
-.botonR{
-    padding: 10px 24px;
-    padding-bottom: 26px;
-    padding-top: 3px;
-}
 .justy{
     text-align: justify;
 }
+[type="radio"].with-gap:checked + span:after {
+    background-color: deeppink;
+  }
+  [type="radio"].with-gap:checked + span:before,
+  [type="radio"].with-gap:checked + span:after {
+    border: 2px solid deeppink;
+  }
