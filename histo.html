@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="index.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="./CSS/index.css">    
+    <link rel="stylesheet" href="./CSS/formatos.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap">
-    <link rel="stylesheet" href="histo.css">
+
     <link rel="icon" type="image/png" href="img/favicon.png">
     
     <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
@@ -45,67 +45,131 @@
                     <div class="col m12">
                             <form class="col s12">
                                 <div class="row">
+                                    <h3>Historia Clínica</h3>
+                                </div>
+                                <div class="row">
+                                    <div class="input-fiel col s6">
+                                        <input type="text" class="datepicker" id="calendar" class="validate" required>
+                                        <label for="calendar">Fecha</label>
+                                    </div>
+                                    <div class="input-fiel col s6">
+                                        <input type="text" class="timepicker" id="reloj" class="validate" required>
+                                        <label for="reloj">Hora</label>
+                                    </div>
+                                </div>
+                                <div class="row">
                                     <div class="input-field col s6">
                                             <input id="name" type="text" class="validate" required>
                                             <label for="name">Nombre del Paciente</label>
                                     </div>
                                     <div class="input-field col s6">
                                         <input id="edad" type="number" class="validate" required>
-                                        <label for="edad">Edad del Paciente:</label>
+                                        <label for="edad">Edad del Paciente</label>
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="input-field col s6">
-                                            <span>Genero del Paciente</span>
-                                                <p>
-                                                    <label class="ajuste">
-                                                        <input class="with-gap" name="genero" type="radio" class="validate" required />
-                                                        <span>Masculino</span>
-                                                    </label>
-                                                </p>
-                                                <p>
-                                                    <label>
-                                                        <input class="with-gap" name="genero" type="radio" class="validate" required />
-                                                        <span>Femenino</span>
-                                                    </label>
-                                                </p>  
+                                        <span>Genero del Paciente</span>
+                                            <p>
+                                                <label class="ajuste">
+                                                    <input class="with-gap" name="genero" type="radio" class="validate" required />
+                                                    <span>Masculino</span>
+                                                </label>
+                                            </p>
+                                            <p>
+                                                <label>
+                                                    <input class="with-gap" name="genero" type="radio" class="validate" required />
+                                                    <span>Femenino</span>
+                                                </label>
+                                            </p> 
                                         </div>
-                                        <div class="input-field col s6">
-                                            <span>Estado Civil del Paciente</span>
-                                                <p>
-                                                    <label class="ajuste">
-                                                        <input class="with-gap" name="estadoCivil" type="radio" class="validate" required />
-                                                        <span>Soltero</span>
-                                                    </label>
-                                                </p>
-                                                <p>
-                                                    <label>
-                                                        <input class="with-gap" name="estadoCivil" type="radio" class="validate" required />
-                                                        <span>Casado</span>
-                                                    </label>
-                                                </p>
-                                                <p>
-                                                    <label>
-                                                        <input class="with-gap" name="estadoCivil" type="radio"/ class="validate" required >
-                                                        <span>Otro</span>
-                                                    </label>
-                                                </p>  
-                                        </div>
+                                    <div class="input-field col s6">
+                                        <span>Estado Civil del Paciente</span>
+                                        <p>
+                                            <label class="ajuste">
+                                                <input class="with-gap" name="estadoCivil" type="radio" class="validate" required />
+                                                <span>Soltero</span>
+                                            </label>
+                                        </p>
+                                        <p>
+                                            <label>
+                                                <input class="with-gap" name="estadoCivil" type="radio" class="validate" required />
+                                                <span>Casado</span>
+                                            </label>
+                                        </p>
+                                        <p>
+                                            <label>
+                                                <input class="with-gap" name="estadoCivil" type="radio"/ class="validate" required >
+                                                <span>Otro</span>
+                                            </label>
+                                        </p>  
                                     </div>
-                                        <div class="col s12">
-                                            <div class="row">
-                                                <div class="input-field col s12">
-                                                    <input id="antes-fam" type="text" class="validate">
-                                                    <label for="antes-fam">Antecedentes familiares</label>
-                                                </div>
+                                </div>
+                                    <div class="col s12">
+                                        <div class="row">
+                                            <div class="input-field col s12">
+                                                <input id="histo-antes-fam" type="text" class="validate">
+                                                <label for="histo-antes-fam">Antecedentes familiares</label>
                                             </div>
-                                            <button class="btn waves-effect waves-light" type="submit" name="action"> Continuar</button>
-                                            <button class="btn waves-effect waves-light, rojo" type="reset" name="action"> Borrar</button>
-
-                        </form>
+                                        </div>
+                                        <div class="row">
+                                            <div class="input-field col s12">
+                                                <input id="histo-antes-per" type="text" class="validate">
+                                                <label for="histo-antes-per">Antecedentes personales patológicos</label>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="input-field col s12">
+                                                <input id="histo-antes-qui" type="text" class="validate">
+                                                <label for="histo-antes-qui">Antecedentes quirúrgicos</label>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="input-field col s12">
+                                                <input id="histo-aler" type="text" class="validate">
+                                                <label for="histo-aler">Alergias</label>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="input-field col s12">
+                                                <input id="histo-ex" type="text" class="validate">
+                                                <label for="histo-ex">Exploración Física</label>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="input-field col s12">
+                                                <input id="histo-exam" type="text" class="validate">
+                                                <label for="histo-exam">Exámenes de laboratorio</label>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="input-field col s12">
+                                                <input id="histo-sig" type="text" class="validate">
+                                                <label for="histo-sig">Signos vitales</label>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="input-field col s12">
+                                                <input id="histo-trat" type="text" class="validate">
+                                                <label for="histo-trat">Tratamiento propuesto</label>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="input-field col s12">
+                                                <input id="histo-ovs" type="text" class="validate">
+                                                <label for="histo-ovs">Ovservaciones y condiciones</label>
+                                            </div>
+                                        </div>
+                                    <button class="btn waves-effect waves-light" type="submit" name="action"> Continuar</button>
+                                    <button class="btn waves-effect waves-light, rojo" type="reset" name="action"> Borrar</button>
+                                </div>
+                            </form>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </div>    
-    </body>
+            </div>    
+        </body>
+    <style>
+        body {overflow-x:hidden;}
+    </style>
 </html>

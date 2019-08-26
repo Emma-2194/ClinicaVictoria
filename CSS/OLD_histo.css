@@ -1,0 +1,120 @@
+.title{
+    padding-top: 100px;
+    padding-bottom: 10px;
+    margin: 0;
+    padding-left: 300px;
+}
+.ajuste{
+    padding-top: 10px;
+}
+div.input-field.col.s6{
+    margin-bottom: 0;
+}
+p{
+    margin-bottom: 0;
+}
+h3{
+    margin: 0;
+}
+form.col.s12{
+    padding-left: 100px;
+    padding-right: 100px;
+}
+div.row.card-panel{
+    padding-left: 25px;
+    padding-right: 25px;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-top: 50px;
+    margin-bottom: 0px;
+}
+button{
+    margin-top: 25px;
+}
+button.rojo{
+    background-color: rgb(250, 90, 90);
+}
+button.rojo:hover{
+    background-color: rgb(255, 120, 120);
+}
+label{
+    color: black;
+}
+/*Color de los numero del reloj digital, 
+el que estas editando es el que se pone de color*/
+.text-primary {
+    color: white!important;
+}
+/* Fondo de la izquierda del calendario */
+.datepicker-date-display {
+    background-color: deeppink;
+    color: #fff;
+}
+/* El color del numero del dia actual */
+.datepicker-table td.is-today {
+    color: deeppink;
+  }
+/* Color del dia selecionado */
+.datepicker-table td.is-selected {
+    background-color: deeppink;
+    color: #fff;
+}
+/* Es para las bolitas de seleccion del calendario */
+.datepicker-day-button {
+    margin: 2px 2px 2px 0px;
+  }
+/* Color de las letras del calendario */
+.datepicker-cancel,
+.datepicker-clear,
+.datepicker-today,
+.datepicker-done {
+  color: deeppink;
+  padding: 0 1rem;
+}
+/* Color de las letras del reloj */
+button.btn-flat.timepicker-close.waves-effect{
+  color: deeppink;
+  padding: 0 1rem;
+}
+/* Color de linea de la manecilla del reloj analogico */
+.timepicker-canvas line {
+    stroke: deeppink;
+}
+/* Color del punto central del reloj analogico */
+.timepicker-canvas-bearing {
+    fill: deeppink;
+}
+/* Color de la punta de la manecilla */
+.timepicker-canvas-bg {
+    fill: deeppink;
+}
+/* Color de fondo del reloj completo */
+.timepicker-digital-display{
+    background-color: deeppink;
+}
+/* Tamaño del reloj completo*/
+.modal.timepicker-modal.open{
+    height: 373px;
+}
+/* Tamaño del calendario completo*/
+.modal.datepicker-modal.open{
+    height: 391px;
+}
+.input-field label {
+    color: #000;
+}
+.input-field input[type=text] {
+    border-bottom: 1px solid #000;
+    box-shadow: 0 1px 0 0 #000;
+}
+.input-field input[type=number] {
+    border-bottom: 1px solid #000;
+    box-shadow: 0 1px 0 0 #000;
+}
+[type="radio"].with-gap:checked + span:after {
+    background-color: deeppink;
+}  
+[type="radio"].with-gap:checked + span:before,
+[type="radio"].with-gap:checked + span:after {
+    border: 2px solid deeppink;
+}

@@ -1,0 +1,43 @@
+/* Fecto hoja blanca */
+div.row.card-panel{
+    padding-left: 25px;
+    padding-right: 25px;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-top: 50px;
+    margin-bottom: 0px;
+}
+/* Color de fondo del calendario */
+div.datepicker-date-display{
+   background-color: deeppink;
+}
+/* Color de fondo del reloj */
+div.timepicker-digital-display{
+    background-color: deeppink;
+}
+/* Color para circulo hover del reloj */
+div.timepicker-tick.active,
+div.timepicker-tick:hover {
+  background-color: pink;
+}
+/* Color de la linea en la manecilla del reloj */
+div.timepicker-canvas line {
+    stroke: deeppink;
+}
+/* Color rojo a un boton y separacion del lado izquierdo */
+button.rojo{
+    background-color: rgb(250, 90, 90);
+    margin-left: 20px;
+}
+/* Color rojo claro, al pasar el raton */
+button.rojo:hover{
+    background-color: rgb(255, 120, 120);
+}
+/* Color del boton despues de gacer clic */
+button.rojo:focus{
+    background-color: rgb(250, 90, 90);
+}
+/* Tamaño ajustado de imagen dentro del grid */
+.imagenReceta{
+    width: 100%;
+}
