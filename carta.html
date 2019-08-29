@@ -50,12 +50,12 @@
                                 </div>
                                 <div class="row">
                                     <div class="input-field col s6">
-                                        <input type="text" class="datepicker" id="calendar" class="validate" required>
-                                        <label for="calendar">Fecha</label>
+                                        <input type="text" class="datepicker" id="carta-fecha" class="validate" required>
+                                        <label for="carta-fecha">Fecha</label>
                                     </div>
                                     <div class="input-field col s6">
-                                        <input type="text" class="timepicker" id="time" class="validate" required>
-                                        <label for="calendar">Hora</label>
+                                        <input type="text" class="timepicker" id="carta-hora" class="validate" required>
+                                        <label for="carta-hora">Hora</label>
                                     </div>
                                 </div>
                                 <div class="row">
@@ -196,7 +196,7 @@
                                             </p>
                                         </div>
                                     </div>
-                                        <button class="btn waves-effect waves-light" type="submit" name="action"> Continuar</button>
+                                        <button class="btn waves-effect waves-light" id="pdf" type="submit" name="action"> Continuar</button>
                                         <button class="btn waves-effect waves-light, rojo" type="reset" name="action"> Borrar</button>
                                     </div>
                                 </div>
@@ -206,6 +206,10 @@
                 </div>
             </div>    
         </body>
+        <script src="./Js/Pdf/main/index.js"></script>
+        <script src="./Js/Pdf/Titulo/index.js" ></script>
+        <script src="./Js/Pdf/Footer/index.js"></script>
+        <script src="./Js/Pdf/Generator/index.js"></script>
     <style>
         body {overflow-x:hidden;}
     </style>
