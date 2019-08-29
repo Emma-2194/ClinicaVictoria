@@ -25,7 +25,13 @@ div.col.m10{
 }
 .imagen{
     width: 100%;
-    outline: 1px solid rgb(155, 15, 90);
+    height: 130px;
+}
+.imagenCentro{
+    padding-top: 25px;
+    padding-left: 105px;
+    margin-bottom: 55px;
+    width: 90%;
 }
 .cuerpo{
     width: 100%;
@@ -85,7 +91,9 @@ div.col.m10{
     padding-top: 125px;
     padding-left: 25px;
 }
-
 .justy{
     text-align: justify;
+}
+.center{
+    padding-left: 25px;
 }

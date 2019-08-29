@@ -1,6 +1,6 @@
-function mainGenerator(data) {
+function mainGenerator(data, yStart, name) {
     const pdf = new jsPDF();
-    let yPosition = 10;
+    let yPosition = yStart;
     pdf.setFontSize(12);
     Object.keys(data).map((key, i) => {
         let extraLinesString;
@@ -23,7 +23,6 @@ function mainGenerator(data) {
             let restText = text.substring(inlineTextIndexCut);
             extraLinesString = restText.match(/.{0,80}/g);
             extraLines = extraLinesString.filter((textLine) => textLine !== "").length;
-            debugger;
         }
         pdf.text(key, 10 , yPosition);
         pdf.line(xStart, yPosition + 2 , 200, yPosition + 2);
@@ -41,7 +40,9 @@ function mainGenerator(data) {
             }
         }
     })
-    pdf.save('hello_world.pdf');  
+    title(pdf);
+    footer(pdf);
+    pdf.save(name);  
 }
 
 function getLetterVariation(word) {

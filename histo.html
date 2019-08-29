@@ -13,6 +13,7 @@
     
     <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.0.272/jspdf.debug.js"></script>
     <script src="./Js/init.js"></script>
 
     <title> Clinica Victoria</title>
@@ -35,36 +36,42 @@
                 <div class="row">
                     <div class="col m12" >
                         <header>
-                            <div>
-                                <img src="img/logo.png" alt="Clinica Victoria" title="Clinica Victoria" >
+                            <div class="logoUp">
+                                <img class="imagen" src="img/CLINICA VICTORIA.jpg" alt="Clinica Victoria" title="Clinica Victoria" >
                             </div>
                         </header>
                     </div>
                 </div>
                 <div class="row card-panel">
                     <div class="col m12">
-                            <form class="col s12">
+                            <form class="col s12" id="histoForm" >
                                 <div class="row">
                                     <h3>Historia Clínica</h3>
                                 </div>
                                 <div class="row">
-                                    <div class="input-field col s6">
-                                        <input type="text" class="datepicker" id="calendar" class="validate" required>
-                                        <label for="calendar">Fecha</label>
-                                    </div>
-                                    <div class="input-field col s6">
-                                        <input type="text" class="timepicker" id="reloj" class="validate" required>
-                                        <label for="reloj">Hora</label>
+                                    <div class="input-field col s12">
+                                        <input id="histo-lugar" type="text" class="text" class="validate" required>
+                                        <label for="histo-lugar">Lugar</label>
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="input-field col s6">
-                                            <input id="name" type="text" class="validate" required>
-                                            <label for="name">Nombre del Paciente</label>
+                                        <input type="text" class="datepicker" id="histo-fecha" class="validate" required>
+                                        <label for="histo-fecha">Fecha</label>
                                     </div>
                                     <div class="input-field col s6">
-                                        <input id="edad" type="number" class="validate" required>
-                                        <label for="edad">Edad del Paciente</label>
+                                        <input type="text" class="timepicker" id="histo-reloj" class="validate" required>
+                                        <label for="histo-reloj">Hora</label>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="input-field col s6">
+                                            <input id="histo-name" type="text" class="validate" required>
+                                            <label for="histo-name">Nombre del Paciente</label>
+                                    </div>
+                                    <div class="input-field col s6">
+                                        <input id="histo-edad" type="number" class="validate" required>
+                                        <label for="histo-edad">Edad del Paciente</label>
                                     </div>
                                 </div>
                                 <div class="row">
@@ -72,13 +79,13 @@
                                         <span>Genero del Paciente</span>
                                             <p>
                                                 <label class="ajuste">
-                                                    <input class="with-gap" name="genero" type="radio" class="validate" required />
+                                                    <input id="histo-sexo" class="with-gap" name="genero" type="radio" class="validate" required />
                                                     <span>Masculino</span>
                                                 </label>
                                             </p>
                                             <p>
                                                 <label>
-                                                    <input class="with-gap" name="genero" type="radio" class="validate" required />
+                                                    <input id="histo-sexo" class="with-gap" name="genero" type="radio" class="validate" required />
                                                     <span>Femenino</span>
                                                 </label>
                                             </p> 
@@ -87,19 +94,19 @@
                                         <span>Estado Civil del Paciente</span>
                                         <p>
                                             <label class="ajuste">
-                                                <input class="with-gap" name="estadoCivil" type="radio" class="validate" required />
+                                                <input id="histo-civil" class="with-gap" name="estadoCivil" type="radio" class="validate" required />
                                                 <span>Soltero</span>
                                             </label>
                                         </p>
                                         <p>
                                             <label>
-                                                <input class="with-gap" name="estadoCivil" type="radio" class="validate" required />
+                                                <input id="histo-civil" class="with-gap" name="estadoCivil" type="radio" class="validate" required />
                                                 <span>Casado</span>
                                             </label>
                                         </p>
                                         <p>
                                             <label>
-                                                <input class="with-gap" name="estadoCivil" type="radio"/ class="validate" required >
+                                                <input id="histo-civil" class="with-gap" name="estadoCivil" type="radio"/ class="validate" required >
                                                 <span>Otro</span>
                                             </label>
                                         </p>  
@@ -160,8 +167,10 @@
                                                 <label for="histo-ovs">Ovservaciones y condiciones</label>
                                             </div>
                                         </div>
-                                    <button class="btn waves-effect waves-light" type="submit" name="action"> Continuar</button>
-                                    <button class="btn waves-effect waves-light, rojo" type="reset" name="action"> Borrar</button>
+                                        <br>
+                                        <br>
+                                    <button class="btn waves-effect waves-light" id="pdf" type="submit" name="action"> Continuar</button>
+                                    <button class="btn waves-effect waves-light, rojo" id="save" type="reset" name="action"> Borrar</button>
                                 </div>
                             </form>
                         </div>
@@ -169,6 +178,10 @@
                 </div>
             </div>    
         </body>
+        <script src="./Js/Pdf/main/index.js"></script>
+        <script src="./Js/Pdf/Titulo/index.js" ></script>
+        <script src="./Js/Pdf/Footer/index.js"></script>
+        <script src="./Js/Pdf/Generator/index.js"></script>
     <style>
         body {overflow-x:hidden;} 
     </style>
