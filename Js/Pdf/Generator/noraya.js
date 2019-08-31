@@ -1,5 +1,4 @@
-function mainGenerator(data, yStart, name) {
-    const pdf = new jsPDF();
+function mainGeneratorNR(data, yStart, pdf) {
     let yPosition = yStart;
     pdf.setFontSize(12);
     Object.keys(data).map((key, i) => {
@@ -35,14 +34,13 @@ function mainGenerator(data, yStart, name) {
         if (extraLines > 0) {
             for (let j = 0; j < extraLines; j+=1 ) {
                 pdf.text(extraLinesString[j], 10 , yPosition)
-                pdf.line(10, yPosition + 2 , 200, yPosition + 2);
                 yPosition += 10;                
             }
         }
     })
-    title(pdf);
-    footer(pdf);
-    pdf.save(name);  
+    // title(pdf);
+    // footer(pdf);
+    // pdf.addPage(pdf);
 }
 
 function getLetterVariation(word) {

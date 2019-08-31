@@ -13,6 +13,7 @@
     
     <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.0.272/jspdf.debug.js"></script>
     <script src="./Js/init.js"></script>
 
     <title> Clinica Victoria</title>
@@ -54,8 +55,8 @@
                                         <label for="carta-fecha">Fecha</label>
                                     </div>
                                     <div class="input-field col s6">
-                                        <input type="text" class="timepicker" id="carta-hora" class="validate" required>
-                                        <label for="carta-hora">Hora</label>
+                                        <input type="text" class="timepicker" id="carta-reloj" class="validate" required>
+                                        <label for="carta-reloj">Hora</label>
                                     </div>
                                 </div>
                                 <div class="row">
@@ -64,8 +65,8 @@
                                             <label for="carta-nom1">Nombre del Paciente</label>
                                     </div>
                                     <div class="input-field col s6">
-                                        <input id="edad" type="number" class="validate" required>
-                                        <label for="edad">Edad del Paciente</label>
+                                        <input id="carta-edad" type="number" class="validate" required>
+                                        <label for="carta-edad">Edad del Paciente</label>
                                     </div>
                                 </div>
                                 <div class="row">
@@ -73,13 +74,13 @@
                                         <span>Genero del Paciente</span>
                                             <p>
                                                 <label class="ajuste">
-                                                    <input class="with-gap" name="genero" type="radio" class="validate" required />
+                                                    <input class="with-gap" id="carta-sexo" name="genero" type="radio" class="validate" required />
                                                     <span>Masculino</span>
                                                 </label>
                                             </p>
                                             <p>
                                                 <label>
-                                                    <input class="with-gap" name="genero" type="radio" class="validate" required />
+                                                    <input class="with-gap" id="carta-sexoF" name="genero" type="radio" class="validate" required />
                                                     <span>Femenino</span>
                                                 </label>
                                             </p> 
@@ -96,13 +97,13 @@
                                 <div class="input-field col s6">
                                         <p>
                                             <label class="ajuste">
-                                                <input class="with-gap" name="answ" type="radio" class="validate" required />
+                                                <input class="with-gap" id="carta-answ" name="answ" type="radio" class="validate" required />
                                                 <span>Si</span>
                                             </label>
                                         </p>
                                         <p>
                                             <label>
-                                                <input class="with-gap" name="answ" type="radio" class="validate" required />
+                                                <input class="with-gap" id="carta-answ" name="answ" type="radio" class="validate" required />
                                                 <span>No</span>
                                             </label>
                                         </p> 
@@ -196,7 +197,7 @@
                                             </p>
                                         </div>
                                     </div>
-                                        <button class="btn waves-effect waves-light" id="pdf" type="submit" name="action"> Continuar</button>
+                                        <button class="btn waves-effect waves-light" id="pdf2" type="submit" name="action"> Continuar</button>
                                         <button class="btn waves-effect waves-light, rojo" type="reset" name="action"> Borrar</button>
                                     </div>
                                 </div>
@@ -206,10 +207,11 @@
                 </div>
             </div>    
         </body>
-        <script src="./Js/Pdf/main/index.js"></script>
-        <script src="./Js/Pdf/Titulo/index.js" ></script>
-        <script src="./Js/Pdf/Footer/index.js"></script>
-        <script src="./Js/Pdf/Generator/index.js"></script>
+        <script src="./Js/Pdf/Main/carta.js"></script>
+        <script src="./Js/Pdf/Titulo/title.js" ></script>
+        <script src="./Js/Pdf/Footer/footer.js"></script>
+        <script src="./Js/Pdf/Generator/generador.js"></script>
+        <script src="./Js/Pdf/Generator/noraya.js"></script>
     <style>
         body {overflow-x:hidden;}
     </style>

@@ -1,9 +1,9 @@
-function makePdf() {
+function template1() {
+    const pdf = new jsPDF();
     const lugar = document.getElementById('histo-lugar').value;
     const fecha = document.getElementById('histo-fecha').value;
     const hora = document.getElementById('histo-reloj').value;   
     const name = document.getElementById('histo-name').value;
-    const name = document.getElementById(' key-name').value;
     const edad = document.getElementById('histo-edad').value;
     const sexo = document.getElementById('histo-sexo').value;
     const civil = document.getElementById('histo-civil').value;
@@ -16,7 +16,7 @@ function makePdf() {
     const sig = document.getElementById('histo-sig').value;
     const trat = document.getElementById('histo-trat').value;
     const ovs = document.getElementById('histo-ovs').value;
-    
+
 
     const paciente = {
         "Lugar: ":{
@@ -82,10 +82,21 @@ function makePdf() {
         "Ovservaciones y condiciones: ":{
             text: ovs,
             xStart: 69
-        }
+        }       
     }
-    return mainGenerator(paciente, yStart, name);
+    mainGenerator(paciente, yStart, pdf);
+
+    pdf.text(55,260, '__________________________________________')
+    pdf.text(60,270, ' NOMBRE Y FIRMA DE PERSONA TRATANTE')
+   
+    title(pdf,{
+        title: 'HISTORIA CLÍNCA Y FICHA DE IDENTIDAD PARA PROCEDIMIENTOS',
+        x: 35,
+        y: 75
+    })
+    footer(pdf)
+    pdf.save("Historia Clinica - "+name)
 }
-const yStart = 85;
-const button = document.getElementById('pdf');
-button.addEventListener('click', () => makePdf());
+// const yStart = 85;
+// const button = document.getElementById('pdf');
+// button.addEventListener('click', () => makePdf());
