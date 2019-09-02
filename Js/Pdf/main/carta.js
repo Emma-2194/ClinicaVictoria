@@ -101,7 +101,7 @@ function template2() {
     
     pdf.text('Nombre y Cedula Profesional de quien proporción la información realiza el procedimiento ', 20,20);
     mainGenerator(paciente4,30,pdf);
-    pdf.text('Yo, '+name+', de '+edad+' años de edad, con capacidades mentales  para ello: ',20,70);
+    pdf.text(`Yo, ${name} de ${edad} años de edad, con capacidades mentales  para ello: `,20,70);
     pdf.text('acepto que se me explico mi enfermedad y/o padecimiento así como los procedimientos',20,80);
     pdf.text('necesarios para diagnostico y/o tratamientos con sus alternativas, incluyendo beneficios',20,90);
     pdf.text('y riegos; y en el entendido que se busca un beneficio y no un daño a mi persona doy mi',20,100);
@@ -117,6 +117,8 @@ function template2() {
     pdf.text('válida la garantía del procedimiento, además de que la garantía solo se refiere a proce-',20,200);
     pdf.text('dimientos para corregir cualquier situación NO  la devolución del dinero.',20,210);
 
+
+
     pdf.text('_________________________                         _________________________', 30,240);
     pdf.text('  Nombre y firma del paciente                                      Lugar, fecha y hora.', 30,245);
     pdf.text('    y/o representante legal.', 30,250);
@@ -126,26 +128,52 @@ function template2() {
 }
 
 
-function whichPdf(type) {
-    switch (type) {
-        case 1:
-            return template1();
-        case 2:
-            return template2();
-        case 3:
-            return template3();
-        case 4:
-            return template4();
-        case 5:
-            return template5();    
-        case 6:
-            return template6(); 
-        
-        default:
-            break;
+function whichPdf(page,type) {
+    debugger;
+    if (page === 'indicaciones') {
+        if (type === 3) return template3();
+        else if (type === 4) return template4();
+        return template5()
+    } else {
+        switch (page) {
+            case 'histo':
+                return template1();
+            case 'carta':
+                return template2();
+            case 'receta':
+                return template6();
+        }
     }
 }
 const yStart = 70;
-const button = document.getElementById('pdf3');
-// console.log(window.location)
-button.addEventListener('click', () => whichPdf(3));
+const pathname = window.location.pathname;
+function getPage (path) { 
+    let dashIndex = 0;
+    let dotIndex = 0;
+    for (let i = path.length; i >= 0; i--) {
+        const letter = path[i];
+        if (letter === '.') {
+            dotIndex = i;
+        }
+        if (letter === '/') {
+            dashIndex = i;
+            break;
+        }
+    }
+    return { dashIndex, dotIndex };
+}
+
+function whichButton(route, active) {
+    debugger;
+    if (route === 'indicaciones') {
+        return `pdf${active}`;
+    }
+    return 'pdf';
+}
+
+let active = 4;
+const { dashIndex, dotIndex } = getPage(pathname);
+const whichPage = pathname.substring(dashIndex + 1, dotIndex);
+const button = document.getElementById(whichButton(whichPage, active));
+button.addEventListener('click', () => whichPdf(whichPage, active));
+debugger;

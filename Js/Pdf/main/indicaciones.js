@@ -184,5 +184,15 @@ function template5() {
     })
     footer(pdf)
     pdf.save("Pre Operatorio Papada - "+name1)
+}
 
+const lipoP = document.getElementById('lipoP');
+const lipoM = document.getElementById('lipoM');
+const lipoB = document.getElementById('lipoB');
+lipoP.addEventListener('click', () => setActive(3));
+lipoM.addEventListener('click', () => setActive(4));
+lipoB.addEventListener('click', () => setActive(5));
+
+function setActive(activeVar) {
+    active = activeVar;
 }
